@@ -23,21 +23,11 @@ echo $csv;
 exit;
 }
 
-// Add extra menu items for admins
-add_action('admin_menu', array($this, 'admin_menu'));
-
 // Create end-points
 add_filter('query_vars', array($this, 'query_vars'));
 add_action('parse_request', array($this, 'parse_request'));
 }
 
-/**
-* Add extra menu items for admins
-*/
-public function admin_menu()
-{
-add_menu_page('Download Report', 'Download Report', 'manage_options', 'download_report', array($this, 'download_report'));
-}
 
 /**
 * Allow for custom query variables

@@ -96,7 +96,14 @@ function automobile_theme_options_scripts(){
  * Output the options page
  */
 function automobile_export_page() {
-	echo 'comming soon.';
+	echo '<div class="wrap">';
+	echo '<div id="icon-tools" class="icon32">
+	</div>';
+	echo '<h2>Download Report</h2>';
+	//$url = site_url();
+
+	echo '<p>Export the Subscribers</p>';
+	echo '<a href="admin.php?page=automobile_export&download_report=1">Download</a>';
 	
 }
 
